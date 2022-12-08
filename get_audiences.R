@@ -71,20 +71,20 @@ internal_page_ids %>% #count(cntry, sort  =T) %>%
 
 
 
-runoff7 <- dir("midterms", full.names = T) %>%
-  # .[1]
-  map_dfr(readRDS)
-
-saveRDS(runoff7, "data/runoff7.rds")
-
-runoff <- readRDS("data/runoff7.rds")
-
+# runoff7 <- dir("midterms", full.names = T) %>%
+#   # .[1]
+#   map_dfr(readRDS)
+#
+# saveRDS(runoff7, "data/runoff7.rds")
+#
+# runoff <- readRDS("data/runoff7.rds")
+#
+# # runoff %>%
+# #   count(ds, internal_id) %>%
+# #   count(internal_id, sort = T)
+#
+# library(tidyverse)
 # runoff %>%
-#   count(ds, internal_id) %>%
-#   count(internal_id, sort = T)
-
-library(tidyverse)
-runoff %>%
-  arrange(desc(ds)) %>%
-  distinct(.keep_all = T) %>%
-  count(ds, sort = T)
+#   arrange(desc(ds)) %>%
+#   distinct(.keep_all = T) %>%
+#   count(ds, sort = T)
