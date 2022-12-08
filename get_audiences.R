@@ -11,7 +11,7 @@ tstamp <- Sys.time()
 
 # source("utils.R")
 
-last90days <- read_csv("data/FacebookAdLibraryReport_2022-11-25_US_last_90_days_advertisers.csv") %>%
+last90days <- read_csv("data/FacebookAdLibraryReport_2022-12-05_US_last_30_days_advertisers.csv") %>%
   janitor::clean_names() %>%
   arrange(desc(amount_spent_usd)) %>%
   mutate(spend_upper = amount_spent_usd %>% as.numeric()) %>%
